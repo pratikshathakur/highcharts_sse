@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <title>MY POLLS</title>
+  <style>.hidden { display: none; }
+        [type="radio"]:not(:checked), [type="radio"]:checked {
+                position: relative; 
+                opacity: 1; 
+    }
+
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h1>OS Vote</h1>
+    <p>Vote for your favorite OS to develop on</p>
+    <form id="vote-form" action="/" method="post">
+      <p>
+        <label>
+            <input type="radio" name="os" id="windows" value="Windows">
+            <span for="windows">Windows</span>
+        </label>
+      <p>
+        <label>
+            <input type="radio" name="os" id="macos" value="MacOS">
+            <span for="macos">MacOS</span>
+        </label>
+      <p>
+        <label>
+            <input type="radio" name="os" id="linux" value="Linux">
+            <span for="linux">Linux Distro</span>
+        </label>
+      </p>
+      <p>
+        <label>
+            <input type="radio" name="os" id="other" value="Other">
+            <span for="other">Something else</span>
+        </label>
+      </p>
+      <input type="submit" value="Vote" class="btn">
+    </form>
+
+    <br>
+    <br>
+    
+    <figure class="highcharts-figure">
+      <div id="container"></div>
+      <div id="sliders">
+        <table>
+          <tr>
+            <td><label for="alpha">Alpha Angle</label></td>
+            <td><input id="alpha" type="range" min="0" max="45" value="15" /> <span id="alpha-value" class="value"></span></td>
+          </tr>
+          <tr>
+            <td><label for="beta">Beta Angle</label></td>
+            <td><input id="beta" type="range" min="-45" max="45" value="15" /> <span id="beta-value" class="value"></span></td>
+          </tr>
+          <tr>
+            <td><label for="depth">Depth</label></td>
+            <td><input id="depth" type="range" min="20" max="100" value="50" /> <span id="depth-value" class="value"></span></td>
+          </tr>
+        </table>
+      </div>
+    </figure>
+  </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="main.js"></script>
+
+  
+  
+
+
+</body>
+
+</html>
