@@ -34,8 +34,10 @@ var eventSource =new EventSource("/poll/eventSource");
     
     //count the vote points for each os reduce-acc/current parameters
 
-    voteCounts = votes.reduce((acc,vote)=>
-        ((acc[vote.os]=(acc[vote.os] || 0)+parseInt(vote.points)),acc),
+    voteCounts = votes.reduce((acc,vote)=>{
+        acc[vote.os]=(acc[vote.os] || 0)+parseInt(vote.points);
+        return acc;
+    },
         {Windows:0,MacOS:0,Linux:0,Other:0}
     );
 
